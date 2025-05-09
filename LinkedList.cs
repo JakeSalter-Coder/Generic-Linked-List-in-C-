@@ -10,7 +10,7 @@ namespace LinkedList {
         public void Print() {
             Node? curr = head;
             while(curr != null) {
-                Console.Write(curr.data);
+                Console.Write(curr.data + " -> ");
                 curr = curr.next;
             }
         }
@@ -63,7 +63,7 @@ namespace LinkedList {
             while(curr != null) {
                 if(i == n-1) {
                     if(curr.next == null) {
-                        throw new InvalidOperationException("Item marked for deleteion not found");
+                        throw new InvalidOperationException("Item marked for deletion not found");
                     }
                     curr.next = curr.next.next;
                     return;
